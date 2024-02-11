@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "../styles/utils";
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+  flex-shrink: 0;
+}
+
+a{
+  display: block;
+}
+
+:root {
+  font-family: 'Manrope', sans-serif;
+  line-height: 1;
+
+  color-scheme: light dark;
+  background: #121212;
+
+  --control-fg: #fff;
+  --control-bg:#000;
+  --control-border: rgba(255,255,255,.3);
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+main {
+  position: relative;
+  flex-grow: 1;
+}

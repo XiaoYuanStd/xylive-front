@@ -1,0 +1,10 @@
+@mixin useTransition($properties...){
+  transition-duration: 600ms;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  transition-property: $properties;
+}
+
+@mixin useForeground($color){
+  color: $color;
+  fill: $color;
+}

@@ -1,0 +1,67 @@
+@import "../../styles/utils";
+
+$header-height:2.6rem;
+
+.header {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--control-bg);
+  @include useForeground(var(--control-fg));
+  z-index: 9999;
+  user-select: none;
+  height: $header-height;
+  @include useTransition(transform);
+  border-bottom: 1px solid var(--control-border);
+  &>*{
+    border-right: 1px solid var(--control-border);
+  }
+  &[data-hide="true"]{
+    transform: translateY(-$header-height);
+  }
+}
+
+.header-sep{
+  flex-grow: 1;
+}
+
+.header-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 .8rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  @include useTransition(padding);
+  &:hover {
+    padding:0 1.2rem;
+  }
+  img,svg{
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+}
+
+*[data-hide="true"]>.header-hide{
+  position: absolute;
+  height: $header-height;
+  border: unset;
+  opacity: .5;
+  margin-top: $header-height;
+  z-index: 9999999;
+}
+
+.main{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin-top: $header-height;
+  @include useTransition(margin-top);
+  &[data-hide="true"]{
+    margin-top: 0;
+  }
+}
