@@ -1,5 +1,6 @@
 import { joinURL } from 'ufo';
 
+export const dynamic = 'force-dynamic';
 export async function GET() {
   try {
     const res = await (
