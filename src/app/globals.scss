@@ -1,9 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "../styles/utils";
+@import '../styles/utils';
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@
   flex-shrink: 0;
 }
 
-a{
+a {
   display: block;
 }
 
@@ -24,17 +24,15 @@ a{
   background: #121212;
 
   --control-fg: #fff;
-  --control-bg:#000;
-  --control-border: rgba(255,255,255,.3);
+  --control-bg: #000;
+  --control-border: rgba(255, 255, 255, 0.3);
 }
 
-body{
+body {
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
-
-
 
 main {
   position: relative;

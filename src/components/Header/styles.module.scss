@@ -1,6 +1,6 @@
-@import "../../styles/utils";
+@import '../../styles/utils';
 
-$header-height:2.6rem;
+$header-height: 2.6rem;
 
 .header {
   position: absolute;
@@ -15,15 +15,15 @@ $header-height:2.6rem;
   height: $header-height;
   @include useTransition(transform);
   border-bottom: 1px solid var(--control-border);
-  &>*{
+  & > * {
     border-right: 1px solid var(--control-border);
   }
-  &[data-hide="true"]{
+  &[data-hide='true'] {
     transform: translateY(-$header-height);
   }
 }
 
-.header-sep{
+.header-sep {
   flex-grow: 1;
 }
 
@@ -31,29 +31,30 @@ $header-height:2.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 .8rem;
+  padding: 0 0.8rem;
   font-size: 1.1rem;
   cursor: pointer;
   @include useTransition(padding);
   &:hover {
-    padding:0 1.2rem;
+    padding: 0 1.2rem;
   }
-  img,svg{
+  img,
+  svg {
     width: 1.3rem;
     height: 1.3rem;
   }
 }
 
-*[data-hide="true"]>.header-hide{
+*[data-hide='true'] > .header-hide {
   position: absolute;
   height: $header-height;
   border: unset;
-  opacity: .5;
+  opacity: 0.5;
   margin-top: $header-height;
   z-index: 9999999;
 }
 
-.main{
+.main {
   position: absolute;
   left: 0;
   right: 0;
@@ -61,7 +62,7 @@ $header-height:2.6rem;
   bottom: 0;
   margin-top: $header-height;
   @include useTransition(margin-top);
-  &[data-hide="true"]{
+  &[data-hide='true'] {
     margin-top: 0;
   }
 }

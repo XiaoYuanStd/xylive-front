@@ -1,3 +1,3 @@
-export async function GET(){
-    return Response.json({ping:'pong'})
+export async function GET() {
+  return Response.json({ ping: 'pong' });
 }

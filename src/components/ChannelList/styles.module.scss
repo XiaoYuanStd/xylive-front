@@ -1,6 +1,6 @@
-@import "../../styles/utils";
+@import '../../styles/utils';
 
-.channels{
+.channels {
   position: absolute;
   width: 12rem;
   height: 100%;
@@ -8,27 +8,27 @@
   background: var(--control-bg);
   @include useForeground(var(--control-fg));
   @include useTransition(transform);
-  &[data-hide="true"]{
+  &[data-hide='true'] {
     transform: translateX(-100%);
   }
 }
 
-.channel{
+.channel {
   position: relative;
-  padding: .6rem;
+  padding: 0.6rem;
   z-index: 1;
   display: flex;
   align-items: center;
-  font-size: .9rem;
+  font-size: 0.9rem;
   cursor: pointer;
   overflow: hidden;
   border-bottom: 1px solid var(--control-border);
-  &>svg{
+  & > svg {
     width: 1.1rem;
     height: 1.1rem;
-    margin-right: .3rem;
+    margin-right: 0.3rem;
   }
-  &:before{
+  &:before {
     content: '';
     position: absolute;
     left: 0;
@@ -41,24 +41,23 @@
     transform-origin: top;
     @include useTransition(transform);
   }
-  &:hover{
+  &:hover {
     @include useForeground(var(--control-bg));
-    &:before{
+    &:before {
       transform: scaleY(1);
       transform-origin: bottom;
     }
   }
-  &:not(:first-child){
-
+  &:not(:first-child) {
   }
-  &[data-watch="true"]::after{
+  &[data-watch='true']::after {
     content: '';
     position: absolute;
-    width: .3rem;
-    height: .3rem;
+    width: 0.3rem;
+    height: 0.3rem;
     border-radius: 50%;
     top: 50%;
-    right: .6rem;
+    right: 0.6rem;
     translate: 0 -50%;
     background: currentColor;
   }
